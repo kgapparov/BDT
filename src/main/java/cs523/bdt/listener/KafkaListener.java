@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class KafkaListener {
 
     @org.springframework.kafka.annotation.KafkaListener(
-            topics = "first_topic",
+            topics = "wikimedia.recentchange",
             groupId = "group_id"
     )
     void Listener (String data) {

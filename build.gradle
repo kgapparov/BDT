@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '17'
 
 configurations {
     compileOnly {
@@ -25,6 +25,11 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compileOnly  'org.springframework.kafka:spring-kafka'
+    // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+
+    // https://mvnrepository.com/artifact/com.launchdarkly/okhttp-eventsource
+    implementation 'com.launchdarkly:okhttp-eventsource:2.7.1'
 }
 
 tasks.named('test') {
